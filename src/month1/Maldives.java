@@ -1,9 +1,9 @@
 package month1;
 
-public class March01 {
-
-	// Kadane algorithm
+	//Kadane algorithm
 	// find array with max sum
+
+public class Maldives {
 
 	public static void main(String[] args) {
 		int[] array = { 1, 3, -9, 2, 8 }; // 10
