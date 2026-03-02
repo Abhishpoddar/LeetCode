@@ -4,7 +4,7 @@ public class SriLanka {
 	//169. Majority Element
 	
 	
-	    public int majorityElement(int[] nums) {
+	    public static int majorityElement(int[] nums) {
 	        int n = nums.length;
 	        
 	        int freq=0 , elem=0;
