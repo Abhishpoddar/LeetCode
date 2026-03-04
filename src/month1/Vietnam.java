@@ -18,6 +18,10 @@ public class Vietnam {
 	        }
 
 	        Arrays.sort(nums1);
+	        
+	        for(int num : nums1) {
+	        	System.out.println(num);
+	        }
 	}
 
 
