@@ -1,39 +1,39 @@
 package month1;
 
 public class Taiwan {
-//	713. Subarray Product Less Than K
-//	Input: nums = [10,5,2,6], k = 100
-//	Output: 8
-	
-	    public static int numSubarrayProductLessThanK(int[] nums, int k) {
+//	4. Count Subarrays with Product Less Than k
+//	Problem:
+//	Given an array of positive integers and an integer k, count the number of 
+//	contiguous subarrays where the product of all elements is less than k.
+//	Example Input: [10, 5, 2, 6], k = 100
+//	Expected Output: 8
 
-	        if(k<=0){
-	            return 0;
-	        }
-	        int count=0;
+	private static int countSubArray(int[] nums, int k) {
 
-	        for(int i=0 ; i<nums.length ; i++){
-	            int prod=1;
-	            for(int j=i ; j<nums.length ; j++){
-	                prod  = prod*nums[j];    
-	                 if(prod<k){
-	                    count++;
-	                }
-	                else{
-	                    break;
-	                }
-	            }
-	            
-	        }
-	    return count;    
-	    }
-	    
-	    public static void main(String[] args) {
-			int [] nums = {10,5,2,6};
-			int k=100;
-			int l = numSubarrayProductLessThanK(nums ,k);
-			System.out.println(l);
-			
+		int count = 0;
+		int start = 0;
+		int end = 0;
+		int pro = 1;
+
+		while (end < nums.length) {
+			pro *= nums[end];
+
+			while (pro >= k && start <= end) {
+				pro /= nums[start++];
+			}
+			count += end - start + 1;
+			end++;
 		}
+		return count;
 
+	}
+
+	public static void main(String[] args) {
+
+		int[] nums = { 10, 5, 2, 6 };
+		int k = 100;
+
+		int l = countSubArray(nums, k);
+		System.out.println(l);
+	}
 }
