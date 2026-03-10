@@ -1,5 +1,4 @@
 package month1;
-
 public class Georgia {
 //	238. Product of Array Except Self
 //	🔗 Problem: Product of Array Except Self
@@ -10,41 +9,25 @@ public class Georgia {
 //	right[i] = product of elements after i
 //	answer[i] = left[i] * right[i]
 //	Optimized solution uses O(1) extra space.
-	
 	private static int [] getResult(int [] nums) {
+
+		int [] ans = new int[nums.length];
 		
-		int [] left= new int[nums.length];
-		int [] right= new int[nums.length];
-		
-		left[0]=nums[0];
-		
+		ans[0]=1;
 		for(int i=1 ; i<nums.length ; i++) {//for left side
-			left[i]= left[i-1]*nums[i];
+			ans[i]= ans[i-1]*nums[i-1];
 		}
-		
-		right[nums.length-1]=nums[right.length-1];//for right side
-		
-		for(int j=nums.length-2 ; j>=0 ; j--) {
-			right[j]= right[j+1]*nums[j];
+		int suffix=1;
+		for(int i=nums.length-2 ; i>=0 ; i--) {//For calculating the product
+			suffix *=nums[i+1];
+			ans[i]*=suffix;
 		}
-		
-		int [] prefix = new int[nums.length];
-		
-		prefix[i]=
-		
-		for(int i=0 ; i<nums.length-1 ; i++) {
-			prefix[i]=left[i-1]*right[nums.length-1-i];
-		}
-	return prefix;	
-		
+	return ans;		
 	}
 	
 	public static void main(String[] args) {
 		int [] nums = {1,2,3,4,0};
-		
-		
 		 nums =getResult(nums);
-		 
 		 for(int num : nums) {
 			 System.out.println(num);
 		 }
