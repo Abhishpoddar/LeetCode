@@ -8,30 +8,28 @@ public class Singapore {
 		int [] nums = {0,2,1,0,2,1};
 		int i = 0;
 		int j = 0;
-		int k = 0;
+		int k = nums.length-1;
 
-		for (int l = 0; l < nums.length; l++) {
-			if (nums[l] == 0) {
-				i++;
-			} else if (nums[l] == 1) {
+		while(j<k) {
+			
+			if(nums[j]==0) {
+				int temp = nums[j];
+				nums[j++]=nums[i];
+				nums[i++]=temp;
+			}
+			
+			else if(nums[j]==1) {
 				j++;
-			} else {
-				k++;
+			}
+			
+			else if(nums[j]==2) {
+				int temp = nums[j];
+				nums[j]=nums[k];
+				nums[k--]=temp;
 			}
 		}
-		int l = 0;
-		while (l < i) {
-			nums[l] = 0;
-			l++;
-		}
-
-		while (l < j + i) {
-			nums[l] = 1;
-			l++;
-		}
-		while (l < j + i + k) {
-			nums[l] = 2;
-			l++;
+		for(int num : nums) {
+			System.out.println(num);
 		}
 	}
 
