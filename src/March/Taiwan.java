@@ -36,4 +36,5 @@ public class Taiwan {
 		int l = countSubArray(nums, k);
 		System.out.println(l);
 	}
+	
 }
