@@ -22,7 +22,7 @@ public class Singapore {
 				j++;
 			}
 			
-			else if(nums[j]==2) {
+			else{
 				int temp = nums[j];
 				nums[j]=nums[k];
 				nums[k--]=temp;
