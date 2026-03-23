@@ -1,11 +1,10 @@
 package March;
-
+//   75 : Sort Colors (Dutch National Flag)
+//   Sort 0s, 1s, and 2s in-place
 public class Singapore {
-	// 75 : Sort Colors (Dutch National Flag)
-	// Sort 0s, 1s, and 2s in-place
-
 	public static void main(String[] args) {
 		int [] nums = {0,2,1,0,2,1};
+		
 		int i = 0;
 		int j = 0;
 		int k = nums.length-1;
@@ -32,5 +31,4 @@ public class Singapore {
 			System.out.println(num);
 		}
 	}
-
 }
