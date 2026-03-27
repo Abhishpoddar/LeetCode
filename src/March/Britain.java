@@ -1,5 +1,5 @@
 package March;
-public class Britain {
+public class Britain{
 //	LeetCode #1456 — Maximum Number of Vowels in a Substring of Given Length
 //	Example 1: Input: s = "abciiidef", k = 3 Output: 3
 //	Explanation: The substring "iii" contains 3 vowel letters.
