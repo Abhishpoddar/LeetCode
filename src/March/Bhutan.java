@@ -1,6 +1,6 @@
 package March;
 
-public class Bhutan {
+public class Bhutan{
 	//Move Zeroes
 	//Move all zeros to the end while maintaining order2E
 	
