@@ -1,29 +1,24 @@
 package March;
-
 public class Luxembourg {
 //	410. Split Array Largest Sum
 //	nums = [7, 2, 5, 10, 8], k = 2
 //	output =18
 	private static boolean isValid(int [] books , int students , int maxPages) {
-		
 		int student=1;
 		int pages=0;
 		
 		for(int i=0 ; i<books.length ; i++) {
-			if(books[i]>maxPages) {
+			if(books[i]>maxPages) 
 				return false;
-			}
 			
-			if(pages+books[i]<=maxPages) {
+			if(pages+books[i]<=maxPages) 
 				pages +=books[i];
-			}
-			else {
+
+			else 
 				pages=books[i];
 				student++;
-			}
-		}
-		
-		return student>students ? false : true;
+	}
+	return student>students ? false : true;
 	}
 	
 	public static void main(String[] args) {
@@ -39,19 +34,17 @@ public class Luxembourg {
 		}
 		
 		int end=sum;
-		
 		int ans=0;
 		
 		while(start<=end) {
 			int mid = start+(end-start)/2;
-			
+		
 			if(isValid(nums , k ,mid)) {
 				ans=mid;
 				end=mid-1;
 			}
-			else {
+			else 
 				start=mid+1;
-			}
 		}
 		System.out.println(ans);
 	}
