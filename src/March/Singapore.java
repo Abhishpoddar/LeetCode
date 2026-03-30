@@ -9,7 +9,7 @@ public class Singapore {
 		int j = 0;
 		int k = nums.length-1;
 
-		while(j<k) {
+		while(j<=k) {
 			
 			if(nums[j]==0) {
 				int temp = nums[j];
@@ -17,9 +17,8 @@ public class Singapore {
 				nums[i++]=temp;
 			}
 			
-			else if(nums[j]==1) {
+			else if(nums[j]==1) 
 				j++;
-			}
 			
 			else{
 				int temp = nums[j];
