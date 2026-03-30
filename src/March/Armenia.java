@@ -1,6 +1,6 @@
 package March;
 
-public class Armenia {
+public class Armenia{
 
 	public static void main(String[] args) {
 		int[] nums = {23,2,4,6,7};
