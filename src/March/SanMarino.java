@@ -15,7 +15,6 @@ public class SanMarino {
 			}
 			nums[prev+1]=current;
 		}
-		
 		System.out.println(Arrays.toString(nums));
 	}
 }
