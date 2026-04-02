@@ -1,22 +1,30 @@
 package April;
-
 public class Slovakia {
-	First Unique Character in a String
+//	387. First Unique Character in a String
+//	Find the first non-repeating character using frequency count.
+//	s = "leetcode"
+//	Output: Index: 0 (character 'l')
+	private static int firstUniqChar(String str) {
 
-	Find the first non-repeating character using frequency count.
-	s = "leetcode"
+		int[] count = new int[26];
 
-	Process using frequency count:
+		for (int i = 0; i < str.length(); i++) 
+			count[str.charAt(i) - 'a']++;
 
-	Count the frequency of each character:
+		int index = -1;
 
-	l:1, e:3, t:1, c:1, o:1, d:1
-	Traverse the string from start to end and find the first character with count 1.
-	'l' → count = 1 ✅
-	That’s the first unique character.
+		for (int j = 0; j < str.length(); j++) {
+			if (count[str.charAt(j) - 'a'] == 1) {
+				index = j;
+				break;
+			}
+		}
+		return index;
+	}
 
-	Output:
+	public static void main(String[] args) {
 
-	Index: 0 (character 'l')
-
+		String str = "leetcode";
+		System.out.println("Index is : "+firstUniqChar(str));
+	}
 }
