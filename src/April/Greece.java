@@ -3,7 +3,7 @@ public class Greece {
 	//7. Reverse Integer
 	//Example 1: Input: x = 123
 	//Output: 321
-	private static int getReverse(int num) {
+	private static int getReverse(int num){
 		if(num>=0 && num<=9) {
 			return num;
 		}
