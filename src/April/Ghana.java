@@ -1,5 +1,4 @@
 package April;
-
 public class Ghana {
 	// 202. Happy Number
 	private static int squareDigitSum(int num) {
@@ -12,9 +11,8 @@ public class Ghana {
 	return sum;	
 	}
 	private static boolean isHappy(int n) {
-		if(n==1 || n==7) {
+		if(n==1 || n==7) 
 			return false;
-		}
 		
 		int slow=n;
 		int fast=n;
@@ -26,7 +24,6 @@ public class Ghana {
 		
 	return slow==1|| slow==7;
 	}
-
 	public static void main(String[] args) {
 		int num = 9;
 		
