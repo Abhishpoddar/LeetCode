@@ -1,5 +1,5 @@
 package April;
-public class Bulgaria {
+public class Bulgaria{
 //	9. Palindrome Number
 //	Input: x = 121
 //	Output: true
