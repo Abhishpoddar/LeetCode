@@ -1,6 +1,6 @@
 package April;
 import java.util.*;
-public class Cameroon {
+public class Cameroon{
 	//66. Plus One
 	public static void main(String[] args) {
 		int [] nums = {9,9,9};
