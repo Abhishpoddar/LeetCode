@@ -1,6 +1,6 @@
 package March;
 import java.util.*;
-public class Denmark {
+public class Denmark{
 //	7️⃣ 4Sum
 //	Find all quadruplets that sum to a target.
 //	Reduce problem to two nested loops + two pointer pair sum.
