@@ -1,6 +1,6 @@
 package March;
 
-public class Estonia {
+public class Estonia{
 //	121. Best Time to Buy and Sell Stock
 //	Input: prices = [7,1,5,3,6,4]
 //	Output: 5
