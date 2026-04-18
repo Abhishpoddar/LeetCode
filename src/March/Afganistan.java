@@ -1,6 +1,6 @@
 package March;
 
-public class Afganistan {
+public class Afganistan{
 		//Remove Duplicates from Sorted Array
 		//Modify array in-place so each element appears once.
 		
