@@ -1,6 +1,6 @@
 package March;
 
-public class Azerbaijan {
+public class Azerbaijan{
 	//152. Minimum Product Subarray
 	
 		public static void main(String[] args) {
