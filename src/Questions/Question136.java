@@ -1,7 +1,7 @@
 package Questions;
 
 public class Question136 {
-	//136 : Single number
+	//136 : Single number 
 	public class SingleNumber {
 		
 		public static void main(String[] args) {
