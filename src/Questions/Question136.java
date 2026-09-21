@@ -15,6 +15,4 @@ public class Question136 {
 	        System.out.println(ans);//4
 		}
 	}
-
-
 }
