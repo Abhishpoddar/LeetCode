@@ -6,7 +6,7 @@ import java.util.*;
 //
 //Example 1:
 //Input: s = "leetcode"
-//Output: 0
+//Output:0
 public class Question387 {
 
 	private static int getUnique(String str) {
