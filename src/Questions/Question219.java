@@ -26,7 +26,6 @@ public class Question219 {
 		return false;
 	}
 
-
 	public static void main(String[] args) {
 		int[] nums = { 1, 0, 1, 1 };
 		int k = 1;
