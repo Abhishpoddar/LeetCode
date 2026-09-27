@@ -30,7 +30,5 @@ public class Question704 {
 		
 		System.out.println(search(nums,target));
 	}
-	
-	
 
 }
