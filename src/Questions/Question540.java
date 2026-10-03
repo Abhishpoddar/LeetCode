@@ -8,8 +8,8 @@ public class Question540 {
         if(nums[0]!=nums[1]) return nums[0];
         if(nums[nums.length-1]!=nums[nums.length-2]) return nums[nums.length-1];
 
-        int start=0;
-        int end=nums.length-1;
+        int start=1;
+        int end=nums.length-2;
 
         while(start<=end){
 
@@ -40,7 +40,7 @@ public class Question540 {
 	
 	public static void main(String[] args) {
 		
-		int [] nums = {1,1,2,3,3,4,4,8,8};
+		int [] nums = {1,1,2,2,3,4,4};
 		
 		System.out.println(singleNonDuplicate(nums));	
 	}

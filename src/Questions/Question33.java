@@ -14,6 +14,7 @@ public class Question33 {
             if(target==nums[mid]){
                 return mid;
             }
+            
 
             if(nums[start]<=nums[mid]){
                 if(nums[start]<=target && target<=nums[mid]){
