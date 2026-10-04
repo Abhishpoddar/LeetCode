@@ -39,6 +39,4 @@ public class Question680 {
 			
 			System.out.println(validPalindrome(str));
 		}
-
-
 }
