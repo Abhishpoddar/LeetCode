@@ -17,8 +17,7 @@ public class Question704 {
 	                end=mid-1;
 	            
 	            else
-	                return mid;
-	            
+	                return mid; 
 	        }
 	    return -1;    
 	    }
