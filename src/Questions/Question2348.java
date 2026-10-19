@@ -1,4 +1,4 @@
-package Oct17;
+package Questions;
 //2348. Number of Zero-Filled Subarrays
 public class Question2348 {
 	
