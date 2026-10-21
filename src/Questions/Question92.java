@@ -1,48 +1,44 @@
 package Questions;
-import java.util.*;
-public class Question92 {
-	
-	private static String getSwap(String str , int i , int j) {
-		
-		char [] ch = str.toCharArray();
-		
-		char temp = ch[i];
-		ch[i]=ch[j];
-		ch[j]=temp;
-		
-	return new String(ch);
-	}
-	
-	private static List<List<String>> permute(String str ,int idx , List<List<String>> list , List<String> current){
-		
-		if(idx==str.length()) {
-			
-			List<String> per = new ArrayList<>();
-			
-			per.add(str);
-			list.add(new ArrayList<>(per));
-			return list;
-		} 
-		
-		for(int i=idx ; i<str.length() ; i++) {
-			
-			String swapped = getSwap(str , i , idx);
-			
-			permute(swapped, idx+1, list, current);
 
-			
+import java.util.*;
+//90. Subsets II
+public class Question92 {
+
+	private static List<List<Integer>> subSets(int[] nums, int i, List<Integer> current, List<List<Integer>> list) {
+
+		if (i == nums.length) {
+			list.add(new ArrayList<>(current));
+			return list;
 		}
-	return list;	
+
+		current.add(nums[i]);
+
+		subSets(nums, i + 1, current, list);
+
+		current.removeLast();
+
+		int idx = i + 1;
+
+		while (idx < nums.length && nums[idx] == nums[idx - 1]) {
+			idx++;
+		}
+
+		subSets(nums, idx, current, list);
+
+		return list;
 	}
-	
+
 	public static void main(String[] args) {
-		String str = "abc";
-		
-		List<List<String>> list = new ArrayList<>();
-		
-		List<String> current = new ArrayList<>();
-		
-		System.out.println(permute(str , 0, list , current));
+
+		int[] nums = { 1, 2, 2};
+
+		Arrays.sort(nums);
+
+		List<List<Integer>> list = new ArrayList<>();
+
+		List<Integer> current = new ArrayList<>();
+
+		System.out.println(subSets(nums, 0, current, list));
 	}
 
 }
