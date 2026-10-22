@@ -19,7 +19,7 @@ public class Question9 {
 			num /= 10;
 		} while (num != 0);
 
-		return rev;
+	return rev;
 	}
 
 	public static boolean isPalindrome(int num) {
