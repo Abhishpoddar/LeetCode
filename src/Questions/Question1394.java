@@ -1,5 +1,4 @@
 package Questions;
-import java.util.*;
 //1394. Find Lucky Integer in an Array
 public class Question1394 {
 
