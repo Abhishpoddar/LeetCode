@@ -34,5 +34,4 @@ public class Question9 {
 		int num = -121;
 		System.out.println(isPalindrome(num));
 	}
-
 }
