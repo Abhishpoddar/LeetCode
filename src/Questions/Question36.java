@@ -1,5 +1,5 @@
 package Questions;
-
+//36. Valid Sudoku
 public class Question36 {
 
 	private static boolean isSafe(char[][] board, int row, int col, char elem) {
