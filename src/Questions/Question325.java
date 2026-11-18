@@ -1,36 +1,34 @@
 package Questions;
-//325.Longest Subarray with given Sum K(Positives)
+import java.util.*;
+//325. Maximum Size Subarray Sum Equals k
 public class Question325 {
-	
-	private static int getLongestSubAarray(int [] nums , int target) {
-		int sum=0;
-		int maxLength=Integer.MIN_VALUE;
 
-		
-		int start=0;
-		int end=0;
-		
-		while(end<nums.length) {
-			
-			sum+=nums[end];
-			
-			while(sum>=target) {
-				if(sum==target) {
-					maxLength=Math.max(maxLength, end-start+1);	
-				}
-				sum-=nums[start++];
-			}
-			end++;
+	public static int longestSubarray(int[] nums, int target) {
+
+		for (int i = 1; i < nums.length; i++) {
+			nums[i] += nums[i - 1];
 		}
-	return maxLength==Integer.MIN_VALUE ? 0 : maxLength;	
+
+		int maxLength = 0;
+
+		Map<Integer, Integer> map = new HashMap<>();
+
+		map.put(0, -1);
+
+		for (int i = 0; i < nums.length; i++) {
+			if (map.containsKey(nums[i] - target)) {
+				int prevIndex = map.get(nums[i] - target);
+				maxLength = Math.max(maxLength, i - prevIndex);
+			}
+			map.putIfAbsent(nums[i], i);
+		}
+		return maxLength;
 	}
-	
+
 	public static void main(String[] args) {
-		
-		int [] nums = {10, 5, 2, 7, 1, 9};
-		int target  = 15; 
-		
-		System.out.println(getLongestSubAarray(nums, target));	
+		int[] nums = { 10, 5, 2, 7, 1, -10 };
+
+		System.out.println(longestSubarray(nums, 15));
 	}
 
 }
